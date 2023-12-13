@@ -1,0 +1,21 @@
+.menu-spacing{
+    height: 30px;
+}
+
+.home-contente{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--gap);
+    min-height: 100vh;
+    position: relative;
+    top: 4.5rem;
+}
+.home-text-contente, .home-img{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+} 
+.home-img{
+    max-width: 90%;
+    height: auto;
+}

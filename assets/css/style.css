@@ -1,0 +1,218 @@
+:root{
+    --primary-color: rgb(8, 0, 35);
+    --white-color: #fff;
+    --gap: 3rem;
+    --ligth-gray-color: #eee;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+/*  font-family: 'Montserrat', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
+*/
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 2rem;
+    color:var(--primary-color) ;
+    line-height: 1.5;
+}
+h1, h2, h3, h4, h5, h6{
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1{
+    font-size: 6rem;
+    text-transform: uppercase;
+}
+
+h2{
+    font-size: 5rem;
+    font-size: 7rem;
+    margin-bottom: 4rem;
+    line-height: 1.2;
+}
+h3{
+    font-size: 4.5rem;
+}
+h4{
+    font-size: 4rem;
+}
+h5{
+    font-size: 3.5rem;
+}
+h6{
+    font-size: 3rem;
+}
+a{
+    text-decoration: none;
+}
+
+table{
+    min-width: 360px;
+    width: 100%;
+    border-collapse: collapse;
+}
+table caption{
+    font-style: italic;
+    font-size: 1.6rem;
+    text-align: left;
+    margin-bottom: 1rem;
+}
+table td, table th{
+    padding: 1rem;
+    text-align: left;
+    border: 0.1rem solid var(--ligth-gray-color);
+}
+tfoot td, table th{
+    background: var(--ligth-gray-color);
+}
+
+.main-bg{
+    background-image: url(../img/rainbow-vortex.svg);
+    background-size: cover;
+    background-position: center center;
+    color: var(--white-color);
+}
+.white-bg{
+    background: var(--white-color);
+    color: var(--primary-color);
+    padding: 0;
+}
+.main-content{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 8rem var(--gap);
+}
+
+.section{
+    min-height: 100vh;
+}
+
+.menu{
+    background: var(--white-color);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    border-bottom: 2px solid var(--ligth-gray-color);
+    z-index: 1;
+}
+.menu-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.menu ul{
+    list-style: none;
+    display: flex;
+    
+}
+.menu ul li a{
+    display: block;
+    padding: 2rem;
+    font-size: 1.8rem;
+    color: rgb(0, 0, 0);
+    position: relative;
+}
+
+
+.menu h1{
+    font-size: 2.3rem;
+    color: var(--primary-color);
+}
+.menu h1:hover{
+    color: rgb(183, 0, 0);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    border-radius: 3px;
+}
+.menu a{
+    color: inherit;
+}
+
+.menu ul li a::after{
+    content: '';
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    width: 0;
+    height: 0.2rem;
+    background: rgb(0, 0, 0);
+    transition: all 300ms ease-in-out;
+}
+.menu ul li a:hover::after{
+    width: 65%;
+    left: 20%;
+}
+.sobre-content{
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    max-width: 70rem;
+    text-align: center;
+}
+.grid-one-content{
+    display: flex;
+    min-height: 100vh;
+    flex-flow: column wrap;
+    justify-content: center;
+}
+.grid-main-heading{
+    margin-bottom: 1rem;
+}
+.grid-descrition{
+    padding-bottom: 5rem;
+}
+.grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--gap);
+    counter-reset: grid-conter;
+}
+.grid h3{
+    font-size: 3rem;
+    position: relative;
+    padding-left: 5rem;
+    padding-bottom: 2rem;
+}
+.grid h3::before{
+    counter-increment: grid-conter;
+    content: counter(grid-conter);
+    position: absolute;
+    font-size: 8rem;
+    font-style: italic;
+    top: -4rem;
+    left: -2rem;
+    transform: rotate(5deg);
+
+}
+.gallery-img{
+    width: 100%;
+    max-width: 36rem;
+    max-height: 36rem;
+    overflow: hidden;
+}
+.gallery-img img{
+    transition: all 300ms ease-in-out;
+}
+.gallery-img img:hover{
+    transform: translate(-3%, 3%) scale(1.2) rotate(5deg);
+}
+
+.respansive-table{
+    overflow-x: auto;
+    overflow: hidden;
+}
